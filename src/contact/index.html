@@ -16,6 +16,10 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Montserrat"
     />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto Condensed"
+      rel="stylesheet"
+    />
     <script src="../scripts/script.js"></script>
   </head>
   <body>
@@ -23,7 +27,7 @@
       <div class="logo-container">
         <img
           class="navi-logo"
-          src="../images/TMS_GroupeEurope_logo.webp"
+          src="../images/TMS_logo_white.webp"
           alt="Tms Group Europe - logo"
         />
       </div>
@@ -35,7 +39,7 @@
         <li><a href="../job/index.html">Kariera</a></li>
         <li><a class="menu-active" href="index.html">Kontakt</a></li>
       </ul>
-      <div class="social-container">
+      <!-- <div class="social-container">
         <a href="www.linkedin.com">
           <img src="../images/linkedin-logo.webp" alt="LinkedIn" />
         </a>
@@ -45,16 +49,27 @@
         <a href="www.youtoobe.com">
           <img src="../images/youtube-logo.webp" alt="Youtoobe" />
         </a>
+      </div> -->
+      <div class="language-container">
+        <img src="../images/plFlag.webp" alt="Jezyk polski" />
+        <img src="../images/gbFlag.webp" alt="Język angielski" />
       </div>
     </nav>
     <section class="contact-section">
       <h1 class="contact-section-title">Skontaktuj się z nami</h1>
       <div class="contact-container">
         <div class="address-container">
+          <div class="address-logo-container">
+            <img
+              class="address-logo"
+              src="../images/TMS_logo_white.webp"
+              alt="TMS Group Europe - Logo"
+            />
+          </div>
           <div class="address">
             <img src="../images/location.webp" alt="Ikona adresu" />
             <div>
-              <span>TMS Group Europe sp. z o.o.</span>
+              <h2>TMS Group Europe sp. z o.o.</h2>
               <span>ul. Siemianowicka 84</span>
               <span>41-902 Bytom</span>
             </div>
@@ -71,20 +86,66 @@
             <img src="../images/www.webp" alt="Ikona www" />
             <span>www.tmsgroup.eu</span>
           </div>
+          <div class="social-container">
+            <a href="www.linkedin.com">
+              <img src="../images/linkedin-logo.webp" alt="LinkedIn" />
+            </a>
+            <a href="www.youtoobe.com">
+              <img src="../images/youtube-logo.webp" alt="Youtoobe" />
+            </a>
+            <a href="www.facebook.com">
+              <img src="../images/fb-logo.webp" alt="Facebook" />
+            </a>
+          </div>
         </div>
         <div class="form-containter">
           <form action="" method="post">
-            <label for="name">imię i nazwisko</label>
-            <input type="text" value="" id="name" />
-            <label for="e-mail">e-mail</label>
-            <input type="text" value="" id="e-mail" />
-            <label for="phone">telefon</label>
-            <input type="text" value="" id="phone" />
-            <label for="subject">temat</label>
-            <input type="text" value="" id="subject" />
-            <label for="message">wiadomość</label>
-            <textarea name="" id="" cols="30" rows="10" id="message"></textarea>
-            <button type="submit">Wyślij</button>
+            <div class="item">
+              <input
+                type="text"
+                name="name"
+                id="name"
+                title="Proszę podać swoje imię"
+                required
+              />
+              <label for="name">Imię i nazwisko</label>
+            </div>
+            <div class="item">
+              <input
+                type="text"
+                name="e-mail"
+                id="e-mail"
+                title="Proszę podać swój adres e-mail"
+                required
+              />
+              <label for="e-mail">E-mail</label>
+            </div>
+            <!-- <div class="item">
+              <input type="text" name="phone" required id="phone" />
+              <label for="phone">Telefon</label>
+            </div> -->
+            <div class="item">
+              <input
+                type="text"
+                name="subject"
+                id="subject"
+                title="Proszę podać tytuł wiadomości"
+                required
+              />
+              <label for="subject">Temat</label>
+            </div>
+            <div class="item">
+              <textarea
+                name="message"
+                id="message"
+                cols="100"
+                rows="10"
+                title="Proszę wpisać wiadomość"
+                required
+              ></textarea>
+              <label for="message">Wiadomość</label>
+            </div>
+            <button type="submit">Wyślij wiadomość</button>
           </form>
         </div>
       </div>

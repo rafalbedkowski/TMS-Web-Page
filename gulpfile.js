@@ -43,7 +43,7 @@ function jsmin(){
 
 // images
 function optimizeimg() {
-    return src('./src/images/**/*.{jpg,png}')
+    return src('./src/images/**/*.{jpg,png,jpeg}')
         .pipe(imagemin([
             imagemin.mozjpeg({quality: 80, progressive: true}),
             imagemin.optipng({optiminzationLevel: 2})
