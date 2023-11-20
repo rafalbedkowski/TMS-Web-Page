@@ -230,9 +230,9 @@ body {
   background-position: center;
 
   .job-title {
-    // font-size: $display-header;
+    font-size: $display-header;
     padding-bottom: $title-margin-bottom;
-    padding-top: $title-margin-top;
+    // padding-top: $title-margin-top;
     // color: $base-color-blue;
     color: #fff;
     text-align: center;
@@ -253,17 +253,40 @@ body {
       // border: 1px solid #464545;
       // border-color: 1px solid $main-section-bgc-color;
       background-color: $main-section-bgc-color;
-      margin: 0 50px;
+      margin: 20px 50px;
 
       transition: 1s all;
+
+      .close {
+        display: none;
+      }
 
       &:hover {
         cursor: pointer;
       }
 
       .card-job-avatar {
+        position: relative;
         display: flex;
         justify-content: center;
+
+        .more {
+          font-size: 14px;
+          display: inline;
+          position: absolute;
+          // color: $base-color-red;
+          color: #fff;
+          text-transform: uppercase;
+          bottom: 10px;
+          left: 50%;
+          transform: translateX(-50%);
+          background-color: rgba(20, 58, 153, 0.7);
+          padding: 5px 20px;
+
+          &:hover {
+            color: $base-color-red;
+          }
+        }
       }
       .card-job-header {
         display: flex;
@@ -279,6 +302,7 @@ body {
           font-weight: normal;
         }
         h3 {
+          color: #bababa;
           font-size: 14px;
           font-weight: normal;
           margin-top: 0;
@@ -294,12 +318,30 @@ body {
       background-color: $card-bgc-color;
       max-width: 450px;
       padding: 30px 50px;
-      // margin: 30px;
       // border-radius: 5px;
       box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
 
       &:hover {
         cursor: auto;
+      }
+      .more {
+        display: none;
+      }
+      .close {
+        display: block;
+        position: absolute;
+        top: 1px;
+        right: 10px;
+        font-size: 36px;
+        color: #aaa;
+        font-weight: bold;
+        z-index: 1;
+      }
+      .close:hover,
+      .close:focus {
+        color: $base-color-blue;
+        text-decoration: none;
+        cursor: pointer;
       }
 
       .card-job-avatar {
@@ -381,87 +423,143 @@ body {
       cursor: pointer;
     }
   }
-  .apply-container {
-    position: absolute;
-    top: 50%;
-   left: 50%;
-    background-color: #fff;
-    color: $base-color-blue;
-    max-width: 300px;
-    display: flex;
-    flex-direction: column;
-    padding: 50px 50px;
-    font-family: "Roboto Condensed";
-    transform: translate(-50%, -50%); 
 
-    form {
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.7);
+
+    .apply-container {
       display: flex;
+      position: fixed;
+      z-index: 1;
+      top: 50%;
+      left: 50%;
+      background-color: #fff;
+      color: $base-color-blue;
+      max-width: 300px;
       flex-direction: column;
-      justify-content: center;
-      align-items: start;
+      padding: 20px 50px;
+      font-family: "Roboto Condensed";
+      transform: translate(-50%, -50%);
 
-      .item {
-        position: relative;
-        margin-bottom: 35px;
-        width: 100%;
+      img {
+        margin: 30px;
       }
 
-      label {
-        position: absolute;
-        bottom: 0;
-        left: 5px;
-        transition: 1s all;
-        line-height: 40px;
+      h1 {
+        text-align: center;
+        margin-bottom: 50px;
       }
 
-      input
-       {
-        padding: 10px 35px;
-        width: 100%;
-        border: none;
-        border-bottom: 1px solid #b3b3b3;
-        box-sizing: border-box;
-        font-family: "Roboto Condensed";
-        background-color: transparent;
-        color: $main-section-bgc-color;
-
-        &:focus {
-          outline: none;
-        }
-      }
-
-      input:hover + label,
-      input:focus + label,
-      input:valid + label {
-        bottom: 20px;
-        opacity: 0.8;
-        font-size: 12px;
-      }
-
-      .btn-container{
+      form {
         display: flex;
-        width: 100%;
-        flex-direction: row;
-        justify-content: end;
-      
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
 
-      button {
-        font-family: "Roboto Condensed";
-        padding: 10px 20px;
-        background-color: #fff;
-        color: $base-color-blue;
-        cursor: pointer;
-        border: 1px solid $base-color-blue;
-        margin-left: 10px;
-        transition: 0.3s all;
+        .item {
+          position: relative;
+          margin-bottom: 35px;
+          width: 100%;
+        }
 
-        &:hover {
+        label {
+          position: absolute;
+          bottom: 0;
+          left: 5px;
+          transition: 1s all;
+          line-height: 40px;
+        }
+
+        input {
+          padding: 10px 35px;
+          width: 100%;
+          border: none;
+          border-bottom: 1px solid #b3b3b3;
+          box-sizing: border-box;
+          font-family: "Roboto Condensed";
+          background-color: transparent;
+          color: $main-section-bgc-color;
+
+          &:focus {
+            outline: none;
+          }
+        }
+
+        // input[type="file"] {
+        //   border: none;
+        // }
+
+        .file-button {
+          color: transparent;
+          display: flex;
+          padding: 0;
+        }
+
+        .file-button::-webkit-file-upload-button {
+          visibility: hidden;
+        }
+
+        .file-button::before {
+          content: "Załącz CV";
+          display: inline-block;
+          background-color: #fff;
+          border: 1px solid $base-color-blue;
+          color: $base-color-blue;
+          padding: 10px 20px;
+          outline: none;
+          white-space: nowrap;
+          cursor: pointer;
+          text-align: center;
+          transition: 0.3s all;
+        }
+
+        .file-button:hover::before {
           background-color: $base-color-blue;
           color: #fff;
         }
+
+        input:hover + label,
+        input:focus + label,
+        input:valid + label {
+          bottom: 20px;
+          opacity: 0.8;
+          font-size: 12px;
+        }
+
+        .btn-container {
+          display: flex;
+          width: 100%;
+          flex-direction: row;
+          justify-content: space-between;
+
+          button {
+            font-family: "Roboto Condensed";
+            padding: 10px 20px;
+            background-color: #fff;
+            color: $base-color-blue;
+            cursor: pointer;
+            border: 1px solid $base-color-blue;
+            // margin-left: 10px;
+            transition: 0.3s all;
+
+            &:hover {
+              background-color: $base-color-blue;
+              color: #fff;
+            }
+          }
+        }
       }
     }
-  }
   }
 }
 
@@ -560,10 +658,6 @@ body {
           padding: 0 10px;
           background-color: rgba(0, 0, 0, 0.3);
         }
-
-        img {
-          // border-radius: 5px;
-        }
       }
 
       a {
@@ -623,6 +717,7 @@ body {
   background-position: center;
 
   .contact-section-title {
+    font-size: $display-header;
     text-transform: uppercase;
     color: #fff;
     margin-bottom: 80px;

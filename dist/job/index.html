@@ -62,7 +62,9 @@
       <h1 class="job-title">Oferty pracy</h1>
       <div class="job-offer-container">
         <div class="card-job-container">
+          <span class="close">&times;</span>
           <div class="card-job-avatar">
+            <span class="more">więcej</span>
             <img src="../images/seniordev.webp" alt="developer it" />
           </div>
           <div class="card-job-header">
@@ -109,7 +111,9 @@
           </div>
         </div>
         <div class="card-job-container">
+          <span class="close">&times;</span>
           <div class="card-job-avatar">
+            <span class="more">więcej</span>
             <img src="../images/developer.webp" alt="senior developer it" />
           </div>
           <div class="card-job-header">
@@ -155,7 +159,9 @@
           </div>
         </div>
         <div class="card-job-container">
+          <span class="close">&times;</span>
           <div class="card-job-avatar">
+            <span class="more">więcej</span>
             <img
               src="../images/electrician.webp"
               alt="elektryk / elektromonter"
@@ -216,7 +222,9 @@
           </div>
         </div>
         <div class="card-job-container">
+          <span class="close">&times;</span>
           <div class="card-job-avatar">
+            <span class="more">więcej</span>
             <img src="../images/manager.webp" alt="manager" />
           </div>
           <div class="card-job-header">
@@ -290,41 +298,45 @@
           </div>
         </div>
       </div>
-      <div class="apply-container">
-        <form action="" method="post">
-          <div class="item">
-            <input
-              type="text"
-              name="name"
-              id="name"
-              title="Proszę podać swoje imię"
-              required
-            />
-            <label for="name">Imię i nazwisko</label>
-          </div>
-          <div class="item">
-            <input
-              type="text"
-              name="e-mail"
-              id="e-mail"
-              title="Proszę podać swój adres e-mail"
-              required
-            />
-            <label for="e-mail">E-mail</label>
-          </div>
-          <div class="item">
-            <input type="text" name="phone" required id="phone" />
-            <label for="phone">Telefon</label>
-          </div>
-          
-          <div class="item">
-            <input type="file">
-          </div>
-          <div class="btn-container">
-            <button type="reset">Zamknij</button>
-            <button type="submit">Wyślij wiadomość</button>
-          </div>
-        </form>
+      <div class="modal">
+        <div class="apply-container">
+          <img src="../images/TMS_logo_color.webp" alt="TMS logo" />
+          <h1>Podaj swoje dane</h1>
+          <form action="" method="post">
+            <div class="item">
+              <input
+                type="text"
+                name="name"
+                id="name"
+                title="Proszę podać swoje imię"
+                required
+              />
+              <label for="name">Imię i nazwisko</label>
+            </div>
+            <div class="item">
+              <input
+                type="text"
+                name="e-mail"
+                id="e-mail"
+                title="Proszę podać swój adres e-mail"
+                required
+              />
+              <label for="e-mail">E-mail</label>
+            </div>
+            <div class="item">
+              <input type="text" name="phone" required id="phone" />
+              <label for="phone">Telefon</label>
+            </div>
+
+            <div class="item">
+              <input type="file" class="file-button" />
+            </div>
+            <div class="btn-container">
+              <button type="reset" class="close-btn">Zamknij</button>
+              <button type="submit" class="submit-btn">Wyślij wiadomość</button>
+            </div>
+          </form>
+        </div>
       </div>
     </section>
   </body>
