@@ -157,6 +157,12 @@ body {
   background-color: $main-section-bgc-color;
   //   background-color: #fff;
   position: relative;
+  background: linear-gradient(rgba(20, 58, 153, 0.9), rgba(0, 0, 0, 0.3)),
+    url("../images/hero.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 
   .content-container-title {
     font-size: $display-header;
@@ -375,6 +381,88 @@ body {
       cursor: pointer;
     }
   }
+  .apply-container {
+    position: absolute;
+    top: 50%;
+   left: 50%;
+    background-color: #fff;
+    color: $base-color-blue;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    padding: 50px 50px;
+    font-family: "Roboto Condensed";
+    transform: translate(-50%, -50%); 
+
+    form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: start;
+
+      .item {
+        position: relative;
+        margin-bottom: 35px;
+        width: 100%;
+      }
+
+      label {
+        position: absolute;
+        bottom: 0;
+        left: 5px;
+        transition: 1s all;
+        line-height: 40px;
+      }
+
+      input
+       {
+        padding: 10px 35px;
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid #b3b3b3;
+        box-sizing: border-box;
+        font-family: "Roboto Condensed";
+        background-color: transparent;
+        color: $main-section-bgc-color;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      input:hover + label,
+      input:focus + label,
+      input:valid + label {
+        bottom: 20px;
+        opacity: 0.8;
+        font-size: 12px;
+      }
+
+      .btn-container{
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: end;
+      
+
+      button {
+        font-family: "Roboto Condensed";
+        padding: 10px 20px;
+        background-color: #fff;
+        color: $base-color-blue;
+        cursor: pointer;
+        border: 1px solid $base-color-blue;
+        margin-left: 10px;
+        transition: 0.3s all;
+
+        &:hover {
+          background-color: $base-color-blue;
+          color: #fff;
+        }
+      }
+    }
+  }
+  }
 }
 
 .content-container {
@@ -408,12 +496,20 @@ body {
   }
 }
 
-.case-container {
+.case-section {
   padding-top: $navigation-menu-size;
   text-align: center;
-  background-color: $main-section-bgc-color;
+  // background-color: $main-section-bgc-color;
 
-  .case-container-title {
+  background-color: rgba(0, 0, 0, 0.25);
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3)),
+    url("../images/case.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  .case-section-title {
     text-align: center;
     font-size: $display-header;
     color: #fff;
