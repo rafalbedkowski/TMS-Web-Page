@@ -1,16 +1,23 @@
 window.onload = function(){
 const jobCards = document.querySelectorAll('.card-job-container');
+const closeButtons = document.querySelectorAll('.close');
 
 if(jobCards.length > 0) {
 jobCards.forEach(card => {
-    card.addEventListener('mouseover', function(e){
+    card.addEventListener('click', function(){
         showJobOffer(this);
     });
-
-    card.addEventListener('mouseout', function(e){
-        hideJobOffer(this);
-    })
 });
+}
+
+
+if(closeButtons.length>0){
+    closeButtons.forEach(button=>{
+        button.addEventListener('click',function(e){
+            e.stopPropagation();
+            hideJobOffer();
+        })
+    })
 }
 
 window.addEventListener("scroll",function(){
@@ -18,13 +25,20 @@ window.addEventListener("scroll",function(){
 });
 
 
-const showJobOffer = function(card){
-card.classList.add('card-job-active')
+const showJobOffer = function(jobCard){
+    const cards = document.querySelectorAll('.card-job-container');
+    cards.forEach(card => {
+        card.classList.remove('card-job-active')
+    });
+
+    jobCard.classList.add('card-job-active');
 };
 
-const hideJobOffer = function(card){
-    if(card.classList.contains('card-job-active'))
-        card.classList.remove('card-job-active')
+const hideJobOffer = function(){
+    const cards = document.querySelectorAll('.card-job-container');
+    cards.forEach(card => {
+        card.classList.remove('card-job-active');
+    });
 }
 
 const changeNavigationStyle = function(){
@@ -40,4 +54,33 @@ const changeNavigationStyle = function(){
         navi.classList.remove('top-menu-active')
     }
 }
+
+//MODAL JOB APPLY
+const offers = document.querySelectorAll('.apply-btn');
+
+if(offers.length >0){
+    offers.forEach(btn=>{
+        btn.addEventListener('click', function(){showModal()});
+    })
+}
+
+const modal = document.getElementsByClassName('modal')[0];
+
+showModal = function(){
+modal.style.display = 'block'
+}
+
+const closeBtn = document.getElementsByClassName('close-btn')[0];
+
+if (closeBtn != null){
+closeBtn.onclick = ()=> modal.style.display = 'none';
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+}
+//END MODAL
+
 }
