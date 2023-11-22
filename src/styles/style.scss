@@ -21,7 +21,6 @@ body {
   transition: 0.5s all;
 
   .top-menu {
-
     // background-color: rgba(0, 0, 0, 0.7);
     // height: 50px;
     // border-radius: 0 0 10px 10px;
@@ -64,6 +63,8 @@ body {
   left: 0;
   z-index: 999;
   background-color: transparent;
+  // border-bottom: 1px solid #5a5a5a;
+  // border-bottom-width: 10%;
 
   .top-menu {
     display: flex;
@@ -165,9 +166,11 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
 
   .content-container-title {
-    font-size: $display-header;
+    // font-size: $display-header;
+    font-size: 3vw;
     color: #fff;
     text-align: center;
     text-transform: uppercase;
@@ -221,10 +224,21 @@ body {
   .trust-company-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
 
     .trust-copmany {
       height: 100px;
+      transition: 0.5s all;
+      margin: 50px;
+      padding: 20px;
+      border: 1px solid #ebebeb;
+      border-radius: 5px;
+
+      &:hover {
+        transform: scale(1.2);
+        border: 1px solid $base-color-blue;
+        cursor: pointer;
+      }
     }
   }
 }
@@ -255,9 +269,8 @@ body {
   // background-image: url(../images/joboffer.jpg);
   // background-size: cover;
   // background-color: $main-section-bgc-coclor;
- 
 
-  .job-header{
+  .job-header {
     padding-top: $navigation-menu-size;
 
     background-color: rgba(0, 0, 0, 0.25);
@@ -267,16 +280,16 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-  .job-title {
-    font-size: $display-header;
-    padding-bottom: $title-margin-bottom;
-    // padding-top: $title-margin-top;
-    // color: $base-color-blue;
-    color: #fff;
-    text-align: center;
-    text-transform: uppercase;
+    .job-title {
+      font-size: $display-header;
+      padding-bottom: $title-margin-bottom;
+      // padding-top: $title-margin-top;
+      // color: $base-color-blue;
+      color: #fff;
+      text-align: center;
+      text-transform: uppercase;
+    }
   }
-}
 
   .job-offer-container {
     display: flex;
@@ -584,9 +597,9 @@ body {
           color: #fff;
         }
 
-        input:hover+label,
-        input:focus+label,
-        input:valid+label {
+        input:hover + label,
+        input:focus + label,
+        input:valid + label {
           bottom: 20px;
           opacity: 0.8;
           font-size: 12px;
@@ -612,7 +625,6 @@ body {
           //     color: $base-color-blue;
           //   }
           // }
-
 
           button {
             font-family: "Roboto Condensed";
@@ -653,7 +665,7 @@ body {
     display: flex;
     height: 350px;
     padding-top: $navigation-menu-size;
-    color: #FFF;
+    color: #fff;
     margin-bottom: 50px;
     padding: 0 20%;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
@@ -662,7 +674,6 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-
 
     .header-title-container {
       display: flex;
@@ -691,12 +702,8 @@ body {
       // background-color: rgba($main-section-bgc-color, $alpha: 0.5);
       padding: 0 30px;
       line-height: 30px;
-
     }
-
   }
-
-
 
   .article-container {
     display: flex;
@@ -713,7 +720,7 @@ body {
       width: 40%;
       margin: 20px;
       // padding: 40px 40px;
-        border: 1px solid #efefef;
+      border: 1px solid #efefef;
       // box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.25);
 
       // border-radius: 5px;
@@ -737,7 +744,6 @@ body {
         span {
           text-indent: 1.5em;
         }
-
       }
 
       .article-header {
@@ -977,7 +983,7 @@ body {
           // text-transform: uppercase;
         }
 
-        textarea+label {
+        textarea + label {
           top: 0;
         }
 
@@ -997,17 +1003,17 @@ body {
           }
         }
 
-        textarea:focus+label,
-        textarea:hover+label,
-        textarea:valid+label {
+        textarea:focus + label,
+        textarea:hover + label,
+        textarea:valid + label {
           top: -20px;
           font-size: 12px;
           opacity: 0.8;
         }
 
-        input:hover+label,
-        input:focus+label,
-        input:valid+label {
+        input:hover + label,
+        input:focus + label,
+        input:valid + label {
           bottom: 20px;
           opacity: 0.8;
           font-size: 12px;
