@@ -166,12 +166,14 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: right;
   background-attachment: fixed;
 
   .content-container-title {
     // font-size: $display-header;
-    font-size: 3vw;
+    position: absolute;
+    top: 50%;
+    font-size: 5vw;
     color: #fff;
     text-align: center;
     text-transform: uppercase;
