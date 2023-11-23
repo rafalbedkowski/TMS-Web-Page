@@ -160,9 +160,10 @@ body {
   background-color: $main-section-bgc-color;
   //   background-color: #fff;
   position: relative;
-  background: linear-gradient(rgba(20, 58, 153, 0.9), rgba(0, 0, 0, 0.3)),
-    url("../images/hero.webp");
-  background-size: cover;
+  background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.1)),
+    url("../images/bg_hero.webp");
+  // background: url("../images/bg_hero.webp");
+  background-size: contain;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -231,12 +232,12 @@ body {
       transition: 0.5s all;
       margin: 50px;
       padding: 20px;
-      border: 1px solid #ebebeb;
+      // border: 1px solid #ebebeb;
       border-radius: 5px;
 
       &:hover {
         transform: scale(1.2);
-        border: 1px solid $base-color-blue;
+        box-shadow: 2px 2px 10px -7px rgba(66, 68, 90, 1);
         cursor: pointer;
       }
     }
