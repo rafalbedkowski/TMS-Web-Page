@@ -83,4 +83,66 @@ window.onclick = function(event) {
 }
 //END MODAL
 
+
+window.addEventListener('scroll',function(){animateScroll()})
+//Case Studies animation 
+
+
+const animateScroll = function(){
+    caseStudiesAmination();
+    
+}
+
+const caseStudies = document.querySelectorAll('.article');
+
+if(caseStudies.length > 0) {
+    caseStudies.forEach(s =>{
+        if(s.getBoundingClientRect().top < screen.height - 100 ){
+            s.classList.add('show');
+        }
+    })
+}
+
+const caseStudiesAmination = function(){
+    if(caseStudies.length > 0) {
+        caseStudies.forEach(studies =>{
+            if(studies.getBoundingClientRect().top < screen.height -100){
+                studies.classList.add('show');
+            }
+            else{
+                studies.classList.remove('show');
+            }
+
+        })
+    }
+}
+
+//Trust company animation
+
+const companies = document.querySelectorAll('.trust-company');
+let startPosition = 50;
+let lastPosition = 0;
+
+if (companies.length > 0){
+    companies.forEach(company => {
+        company.style.left = startPosition + 'px';
+        startPosition += company.clientWidth + 50;
+        if (lastPosition < startPosition) {
+            lastPosition = startPosition - (company.clientWidth + 50);
+        }
+    })
+
+    setInterval(()=>{
+        companies.forEach(company => {
+            const companyPosition = parseInt(company.style.left.replace('px', ''), 10);
+            company.style.left = companyPosition - 10 + 'px' ;
+
+            (companyPosition < screen.width) && (companyPosition  > 0) ? company.style.visibility = "visible" : company.style.visibility = "hidden" ;
+
+            if (companyPosition + company.clientWidth  <=0){
+                company.style.left = lastPosition + 'px';
+            }
+        })
+    },100)
+}
 }

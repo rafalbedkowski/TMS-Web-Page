@@ -1,8 +1,8 @@
 module.exports = {
-    entry: './src/js/app.js',
+    entry: './src/scripts/script.js',
     output: {
-        path: ${__dirname}/dist/js,
-        filename : "bundle.min.j"
+        path: ${__dirname}/dist/scripts,
+        filename : "bundle.min.js"
     },
     watch: false,
     mode: 'production',
