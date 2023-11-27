@@ -19,6 +19,7 @@ body {
   transition: 0.5s all;
   height: 50px;
   transition: 0.5s all;
+  backdrop-filter: blur(10px);
 
   .top-menu {
     // background-color: rgba(0, 0, 0, 0.7);
@@ -175,10 +176,14 @@ body {
     // position: absolute;
     top: 20%;
     left: 50px;
-    font-size: 50px;
+    font-size: $display-header;
     color: #fff;
     // text-align: center;
     // text-transform: uppercase;
+  }
+
+  .content-subtitle {
+    color: #fff;
   }
 }
 
@@ -217,8 +222,58 @@ body {
 }
 
 .benefits-section {
+  height: 100dvh;
+  padding: 0 100px;
   .benefits-heder {
     font-size: $display-header;
+  }
+  .benefits-card-container {
+    display: flex;
+    flex-wrap: wrap;
+
+    .benefits-card {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-width: 300px;
+      height: 200px;
+      // border: 1px solid $base-color-blue;
+      margin: 30px;
+      overflow: hidden;
+      box-shadow: 10px 15px 25px 0 rgba(0, 0, 0, 0.2);
+
+      &:hover .card-back {
+        top: 0;
+      }
+    }
+
+    .card-front {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #fff;
+      color: $base-color-blue;
+    }
+
+    .card-back {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: -200px;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $base-color-blue;
+      color: #fff;
+      transition: 1s;
+    }
   }
 }
 
@@ -287,10 +342,13 @@ body {
 
 .section-job {
   min-height: 100svh;
-  background-color: $main-section-bgc-color;
-  background-image: url(../images/bg_circle.webp);
-  background-size: cover;
-  background-attachment: fixed;
+  background: linear-gradient(
+    rgba($main-section-bgc-color, 1),
+    rgba($main-section-bgc-color, 0.8)
+  );
+  // background-image: url(../images/bg_circle.webp);
+  // background-size: cover;
+  // background-attachment: fixed;
 
   .job-section-header {
     display: flex;
@@ -395,6 +453,8 @@ body {
         color: $base-color-blue;
         background-color: #fff;
         padding: 10px 50px;
+        width: 100%;
+        box-sizing: border-box;
 
         h2 {
           font-size: 18px;
@@ -455,6 +515,7 @@ body {
         position: absolute;
         top: 20px;
         right: 0px;
+        padding: 0;
 
         img {
           height: 150px;
@@ -463,6 +524,7 @@ body {
 
       .card-job-header {
         display: inline;
+        width: 100%;
         border-bottom: 1px solid #b3b3b3;
         background-color: transparent;
         padding: 0;
