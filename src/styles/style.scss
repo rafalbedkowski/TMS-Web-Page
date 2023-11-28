@@ -242,9 +242,21 @@ body {
       margin: 30px;
       overflow: hidden;
       box-shadow: 10px 15px 25px 0 rgba(0, 0, 0, 0.2);
+      // box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+      //   0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+      //   0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+      //   0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
+
+      &:hover {
+        // box-shadow: 0.5rem 0.5rem $base-color-red, -0.5rem -0.5rem #ccc;
+      }
 
       &:hover .card-back {
         top: 0;
+      }
+
+      &:hover .card-front {
+        top: 200px;
       }
     }
 
@@ -259,6 +271,7 @@ body {
       height: 100%;
       background-color: #fff;
       color: $base-color-blue;
+      transition: 1s;
     }
 
     .card-back {
@@ -270,7 +283,15 @@ body {
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: $base-color-blue;
+      // background-color: rgba($base-color-blue, 0.8);
+      background-image: linear-gradient(
+        to bottom,
+        #1544b9,
+        #0047ae,
+        #0049a2,
+        #014a95,
+        #144a87
+      );
       color: #fff;
       transition: 1s;
     }
@@ -278,6 +299,7 @@ body {
 }
 
 .trust-section {
+  height: 100dvh;
   .trust-header {
     font-size: $display-header;
     text-align: center;
@@ -285,23 +307,19 @@ body {
 
   .trust-company-container {
     display: flex;
-    // flex-wrap: wrap;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     padding: 0 100px;
-    height: 150px;
-    overflow: hidden;
-    position: relative;
+    // overflow: hidden;
 
     .trust-company {
       display: flex;
       justify-content: center;
-      position: absolute;
-      left: 0;
       height: 50px;
       width: 180px;
       transition: 0.5s all;
-      // margin: 25px;
+      margin: 25px;
       // width: 150px;
       padding: 10px;
       // border: 1px solid #ebebeb;
@@ -309,7 +327,8 @@ body {
 
       &:hover {
         transform: scale(1.2);
-        box-shadow: 2px 2px 10px -7px rgba(66, 68, 90, 1);
+        box-shadow: 10px 15px 25px 0 rgba(0, 0, 0, 0.2);
+
         cursor: pointer;
       }
 
@@ -319,26 +338,6 @@ body {
     }
   }
 }
-
-// .main-footer {
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
-//   padding-left: 20px;
-//   padding-right: 20px;
-//   height: 50px;
-//   width: 100%;
-//   position: fixed;
-//   bottom: 0;
-//   left: 0;
-//   background-color: $base-color-blue;
-//   font-size: 12px;
-//   color: #fff;
-
-//   img {
-//     height: 25px;
-//   }
-// }
 
 .section-job {
   min-height: 100svh;
@@ -373,6 +372,7 @@ body {
 
       .job-header-subtitle {
         text-align: left;
+        color: $yellow-color;
       }
     }
 
@@ -796,6 +796,7 @@ body {
 
       .case-header-subtitle {
         text-align: left;
+        color: $yellow-color;
       }
     }
 
@@ -1147,6 +1148,101 @@ body {
           &:hover {
             background-color: $base-color-blue;
             color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+
+.main-footer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 150px;
+  background-color: rgba($base-color-blue, 1);
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+    url("../images/bgFooter.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-top: 50px;
+  overflow: hidden;
+
+  .footer-logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(#fff, 0.8);
+    height: 150px;
+    width: 230px;
+    padding: 30px;
+    box-sizing: border-box;
+    // border-radius: 50%;
+    // border-top: 1px solid rgba($base-color-blue, 0.9);
+    // box-shadow: 3px 3px 15px 0 rgba(0, 0, 0, 0.5);
+    margin-left: 30px;
+    .footer-logo {
+      height: 50px;
+    }
+  }
+  .footer-data {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+
+    .footer-address {
+      color: white;
+      margin: 0 30px;
+
+      h1 {
+        font-size: 18px;
+        font-weight: normal;
+        margin-bottom: 25px;
+      }
+
+      h2 {
+        font-size: 14px;
+        font-weight: normal;
+        margin-bottom: 0;
+        margin-top: 0;
+      }
+    }
+
+    .footer-web {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+    }
+
+    .policy {
+      color: #fff;
+      margin: 0 30px;
+
+      ul {
+        li {
+          list-style: none;
+          a {
+            color: #fff;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+
+    .social-container {
+      margin: 0 30px;
+      a {
+        img {
+          height: 30px;
+          margin: 0 5px;
+          filter: grayscale(1);
+
+          &:hover {
+            filter: grayscale(0);
           }
         }
       }
