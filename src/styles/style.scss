@@ -19,6 +19,7 @@ body {
   transition: 0.5s all;
   height: 50px;
   transition: 0.5s all;
+  backdrop-filter: blur(10px);
 
   .top-menu {
     // background-color: rgba(0, 0, 0, 0.7);
@@ -160,7 +161,7 @@ body {
   background-color: $main-section-bgc-color;
   //   background-color: #fff;
   position: relative;
-  background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.1)),
+  background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5)),
     url("../images/bg_hero.webp");
   // background: url("../images/bg_hero.webp");
   background-size: contain;
@@ -169,14 +170,20 @@ body {
   background-position: right;
   background-attachment: fixed;
 
-  .content-container-title {
+  .content-title {
     // font-size: $display-header;
-    position: absolute;
-    top: 50%;
-    font-size: 5vw;
+    // font-family: "Montserrat";
+    // position: absolute;
+    top: 20%;
+    left: 50px;
+    font-size: $display-header;
     color: #fff;
-    text-align: center;
-    text-transform: uppercase;
+    // text-align: center;
+    // text-transform: uppercase;
+  }
+
+  .content-subtitle {
+    color: #fff;
   }
 }
 
@@ -204,7 +211,7 @@ body {
   background-color: $main-section-bgc-color;
   //   background-color: #fff;
   position: relative;
-  color: #FFF;
+  color: #fff;
 
   .about-section-title {
     font-size: $display-header;
@@ -215,8 +222,58 @@ body {
 }
 
 .benefits-section {
+  height: 100dvh;
+  padding: 0 100px;
   .benefits-heder {
     font-size: $display-header;
+  }
+  .benefits-card-container {
+    display: flex;
+    flex-wrap: wrap;
+
+    .benefits-card {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-width: 300px;
+      height: 200px;
+      // border: 1px solid $base-color-blue;
+      margin: 30px;
+      overflow: hidden;
+      box-shadow: 10px 15px 25px 0 rgba(0, 0, 0, 0.2);
+
+      &:hover .card-back {
+        top: 0;
+      }
+    }
+
+    .card-front {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #fff;
+      color: $base-color-blue;
+    }
+
+    .card-back {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: -200px;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $base-color-blue;
+      color: #fff;
+      transition: 1s;
+    }
   }
 }
 
@@ -228,14 +285,25 @@ body {
 
   .trust-company-container {
     display: flex;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
     justify-content: space-around;
+    align-items: center;
+    padding: 0 100px;
+    height: 150px;
+    overflow: hidden;
+    position: relative;
 
-    .trust-copmany {
-      height: 70px;
+    .trust-company {
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      left: 0;
+      height: 50px;
+      width: 180px;
       transition: 0.5s all;
-      margin: 50px;
-      padding: 20px;
+      // margin: 25px;
+      // width: 150px;
+      padding: 10px;
       // border: 1px solid #ebebeb;
       border-radius: 5px;
 
@@ -243,6 +311,10 @@ body {
         transform: scale(1.2);
         box-shadow: 2px 2px 10px -7px rgba(66, 68, 90, 1);
         cursor: pointer;
+      }
+
+      .trust-company-img {
+        height: 50px;
       }
     }
   }
@@ -269,30 +341,49 @@ body {
 // }
 
 .section-job {
-  // min-height: 100svh;
-  //   background-color: $main-section-bgc-coclor;
-  // background-image: url(../images/joboffer.jpg);
+  min-height: 100svh;
+  background: linear-gradient(
+    rgba($main-section-bgc-color, 1),
+    rgba($main-section-bgc-color, 0.8)
+  );
+  // background-image: url(../images/bg_circle.webp);
   // background-size: cover;
-  // background-color: $main-section-bgc-coclor;
+  // background-attachment: fixed;
 
-  .job-header {
+  .job-section-header {
+    display: flex;
+    height: 350px;
     padding-top: $navigation-menu-size;
+    color: #fff;
+    padding: 0 20%;
 
-    background-color: rgba(0, 0, 0, 0.25);
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(20, 58, 153, 0.3)),
-      url("../images/job.jpeg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    .job-title {
-      font-size: $display-header;
-      padding-bottom: $title-margin-bottom;
-      // padding-top: $title-margin-top;
-      // color: $base-color-blue;
-      color: #fff;
-      text-align: center;
-      text-transform: uppercase;
+    .job-header {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+
+      // background-color: rgba($main-section-bgc-color, $alpha: 0.5);
+      .job-header-title {
+        text-align: left;
+        font-size: $display-header;
+        color: #fff;
+        margin-bottom: 0;
+      }
+
+      .job-header-subtitle {
+        text-align: left;
+      }
+    }
+
+    .job-header-description {
+      display: flex;
+      width: 100%;
+      justify-content: flex-start;
+      align-items: center;
+      // background-color: rgba($main-section-bgc-color, $alpha: 0.5);
+      padding: 0 30px;
+      line-height: 30px;
     }
   }
 
@@ -307,10 +398,11 @@ body {
       display: flex;
       flex-direction: column;
       justify-content: center;
+      align-items: center;
       // border: 1px solid #464545;
       // border-color: 1px solid $main-section-bgc-color;
       // background-color: $main-section-bgc-color;
-      background-color: rgba($main-section-bgc-color, 0.3);
+      background-color: rgba($main-section-bgc-color, 0.6);
       margin: 20px 50px;
 
       transition: 1s all;
@@ -329,6 +421,7 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
+        padding: 50px;
 
         .more {
           font-size: 14px;
@@ -359,7 +452,9 @@ body {
         align-items: start;
         color: $base-color-blue;
         background-color: #fff;
-        padding: 0 50px;
+        padding: 10px 50px;
+        width: 100%;
+        box-sizing: border-box;
 
         h2 {
           font-size: 18px;
@@ -420,6 +515,7 @@ body {
         position: absolute;
         top: 20px;
         right: 0px;
+        padding: 0;
 
         img {
           height: 150px;
@@ -428,6 +524,7 @@ body {
 
       .card-job-header {
         display: inline;
+        width: 100%;
         border-bottom: 1px solid #b3b3b3;
         background-color: transparent;
         padding: 0;
@@ -655,8 +752,11 @@ body {
 .case-section {
   // padding-top: $navigation-menu-size;
   text-align: center;
-  // background: linear-gradient(rgba($main-section-bgc-color, 0.9), rgba($main-section-bgc-color, 0.3));
-  //background-color: rgba($main-section-bgc-color, 1);
+  background: linear-gradient(
+    rgba($main-section-bgc-color, 1),
+    rgba($main-section-bgc-color, 0.3)
+  );
+  // background-color: rgba($main-section-bgc-color, 1);
   // background: linear-gradient(rgba($main-section-bgc-color, 1), rgba($main-section-bgc-color, 0.7));
   //   url("../images/caseStudy.webp");
   //     background-size: cover;
@@ -671,16 +771,16 @@ body {
     height: 350px;
     padding-top: $navigation-menu-size;
     color: #fff;
-    margin-bottom: 50px;
+    // margin-bottom: 50px;
     padding: 0 20%;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
-      url("../images/caseStudy.webp");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    // background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+    //   url("../images/caseStudy.webp");
+    // background-size: cover;
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // background-position: center;
 
-    .header-title-container {
+    .case-header {
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -712,101 +812,106 @@ body {
 
   .article-container {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    flex-direction: column;
+    // justify-content: space-around;
+    // flex-wrap: wrap;
+
+    .article.show {
+      width: 100%;
+    }
 
     .article {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       // background-color: #fafafa;
       background-color: #fff;
-      min-width: 300px;
-      max-width: 600px;
-      width: 40%;
-      margin: 20px;
+      overflow: hidden;
+      width: 0;
+      transition: 0.5s all;
+
+      // min-width: 300px;
+      // max-width: 600px;
+      // width: 40%;
+      // margin: 20px;
       // padding: 40px 40px;
-      border: 1px solid #efefef;
+      // border: 1px solid #efefef;
       // box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.25);
-
       // border-radius: 5px;
-      .article-title {
-        color: $base-color-blue;
-        text-align: left;
-        margin-bottom: 30px;
-      }
-
       .article-description {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         font-family: "Roboto Condensed";
-        font-size: 14px;
+        font-size: 16px;
         font-weight: normal;
         line-height: 25px;
         // margin-top: 20px;
-        padding: 20px 50px;
+        // padding: 20px 50px;
+        padding-left: 8%;
+        padding-right: 8%;
         text-align: justify;
         // border-top: 1px solid #e3e3e3;
         // border-bottom: 1px solid #e3e3e3;
+        width: 50%;
+        box-sizing: border-box;
+
+        .article-title {
+          color: $base-color-blue;
+          text-align: left;
+          margin-bottom: 30px;
+        }
 
         span {
           text-indent: 1.5em;
+        }
+
+        a {
+          align-self: flex-end;
+          float: right;
+          text-decoration: none;
+          margin-top: 50px;
+
+          button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: "Roboto Condensed";
+            font-size: 16px;
+            width: 150px;
+            border: none;
+            padding: 10px 20px;
+            margin-bottom: 20px;
+            // font-weight: bold;
+            background-color: #fff;
+            color: $base-color-blue;
+            // border: 1px solid $base-color-blue;
+            // border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s all;
+
+            &:hover {
+              background-color: $base-color-blue;
+              color: #fff;
+            }
+
+            img {
+              height: 20px;
+              padding-right: 10px;
+            }
+          }
         }
       }
 
       .article-header {
         text-align: center;
-        position: relative;
+        // position: relative;
+        width: 50%;
+        height: 500px;
+        box-sizing: border-box;
 
         img {
           width: 100%;
-        }
-
-        // h4 {
-        //   font-weight: normal;
-        //   font-family: "Roboto Condensed";
-        //   line-height: 30px;
-        //   position: absolute;
-        //   top: 0;
-        //   left: 0;
-        //   color: #fff;
-        //   padding: 0 10px;
-        //   background-color: rgba(0, 0, 0, 0.3);
-        // }
-      }
-
-      a {
-        display: flex;
-        justify-content: end;
-        align-items: flex-end;
-        width: 100%;
-        height: 100%;
-        text-decoration: none;
-
-        button {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          font-family: "Roboto Condensed";
-          font-size: 14px;
-          width: 150px;
-          border: none;
-          padding: 10px 20px;
-          margin-bottom: 20px;
-          // font-weight: bold;
-          background-color: #fff;
-          color: $base-color-blue;
-          // border: 1px solid $base-color-blue;
-          // border-radius: 5px;
-          cursor: pointer;
-          transition: 0.3s all;
-
-          &:hover {
-            background-color: $base-color-blue;
-            color: #fff;
-          }
-
-          img {
-            height: 20px;
-            padding-right: 10px;
-          }
+          height: 100%;
         }
       }
     }
@@ -874,6 +979,7 @@ body {
         flex-direction: row;
         margin: 30px 0px;
         align-items: center;
+        border-top: 1px solid rgba(#b3b3b3, 0.7);
 
         img {
           height: 40px;
