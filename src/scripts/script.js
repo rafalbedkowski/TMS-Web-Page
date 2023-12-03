@@ -112,3 +112,13 @@ window.onload = function () {
     animateScroll();
   });
 };
+
+document.addEventListener("DOMContentLoaded", function () {
+  const title = document.querySelector(".content-title");
+  const subtitle = document.querySelector(".content-subtitle");
+  const paragraph = document.querySelector(".content-paragraph");
+
+  title.style.animation = "fadeInLeft 3s forwards";
+  subtitle.style.animation = "fadeIn 1s 2s forwards";
+  paragraph.style.animation = "fadeIn 1s 3s forwards";
+});
