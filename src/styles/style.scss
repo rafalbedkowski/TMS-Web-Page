@@ -168,7 +168,7 @@ body {
   background-color: $main-section-bgc-color;
   //   background-color: #fff;
   position: relative;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)),
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)),
     url("../images/bg_hero.webp");
   // background: url("../images/bg_hero.webp");
   background-size: contain;
@@ -307,6 +307,12 @@ body {
   // padding: 50px;
   text-align: center;
   // padding-top: $navigation-menu-size;
+  // background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+  //   url("../images/benefits.jpeg");
+  // background-size: cover;
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  // background-position: center;
 
   hr {
     width: 200px;
@@ -386,7 +392,6 @@ body {
     overflow: hidden;
     cursor: pointer;
     box-shadow: 10px 15px 25px 0 rgba(0, 0, 0, 0.2);
-    // border: 1px solid $base-color-blue;
     // border-radius: 17px;
     transition: background-color 0.3s ease;
     box-sizing: border-box;
@@ -427,6 +432,7 @@ body {
       line-height: 30px;
       box-sizing: border-box;
       background-color: rgba($base-color-blue, 0.8);
+
       // background-image: linear-gradient(
       //   to bottom,
       //   #1544b9,
@@ -538,7 +544,7 @@ body {
       background-color: #fff;
 
       .company-link {
-        visibility: hidden;
+        opacity: 0;
         position: absolute;
         bottom: 10px;
         right: 15px;
@@ -548,7 +554,7 @@ body {
           border: 1px solid $base-color-blue;
           color: $base-color-blue;
           border-radius: 10px;
-          padding: 3px 10px;
+          padding: 2px 5px;
           font-size: 10px;
           margin-right: 3px;
         }
@@ -566,7 +572,8 @@ body {
       }
 
       &:hover .company-link {
-        visibility: visible;
+        opacity: 1;
+        transition: 2s all;
       }
 
       .trust-company-img {
@@ -581,7 +588,7 @@ body {
 
 .offer-section {
   width: 100%;
-  height: 100dvh;
+  min-height: 100dvh;
   padding-top: $navigation-menu-size;
   background-color: $main-section-bgc-color;
   //   background-color: #fff;
@@ -637,6 +644,7 @@ body {
   }
 
   .offer-solution {
+    height: 100%;
     padding: 0 20%;
 
     ul {
