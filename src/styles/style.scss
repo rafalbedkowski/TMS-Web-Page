@@ -1423,6 +1423,7 @@ body {
         box-sizing: border-box;
       }
     }
+
     .section {
       .section-header {
         display: flex;
@@ -1446,6 +1447,13 @@ body {
           padding: 15px;
         }
       }
+    }
+    .about-section {
+      min-height: 100%;
+    }
+
+    .section-job {
+      min-height: 100dvh;
     }
 
     .trust-section.section {
