@@ -16,7 +16,55 @@ body {
   padding: 0;
   // font-family: "Montserrat";
   font-family: "Roboto Condensed";
-  padding-bottom: 200px;
+  // padding-bottom: 200px;
+  background-color: $main-section-bgc-color;
+
+  .section {
+    min-height: 100dvh;
+    background-color: #fafafa;
+
+    .section-header {
+      display: flex;
+      justify-content: center;
+      padding: 0 5%;
+      padding-top: $navigation-menu-size;
+      padding-bottom: 50px;
+      background-color: $main-section-bgc-color;
+
+      .header {
+        max-width: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+
+        .header-title {
+          text-align: left;
+          font-size: $display-header;
+          color: #fafafa;
+          margin-bottom: 0;
+          text-transform: uppercase;
+        }
+
+        .header-subtitle {
+          text-align: left;
+          color: $yellow-color;
+        }
+      }
+
+      .header-description {
+        max-width: 500px;
+        display: flex;
+        width: 100%;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0 30px;
+        line-height: 30px;
+        text-align: left;
+        color: #fff;
+      }
+    }
+  }
 }
 
 .top-menu-container.top-menu-active {
@@ -29,11 +77,6 @@ body {
   backdrop-filter: blur(10px);
 
   .top-menu {
-    // background-color: rgba(0, 0, 0, 0.7);
-    // height: 50px;
-    // border-radius: 0 0 10px 10px;
-    // padding: 0px 20px;
-    // transition: 0.5s all;
     li {
       a {
         color: #fff;
@@ -46,15 +89,6 @@ body {
   }
 
   .logo-container {
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
-    // height: 60px;
-    // width: 120px;
-    // margin: 10px 0 0 10px;
-    // // border-radius: 15px;
-    // background-color: #fff;
-
     .navi-logo {
       height: 25px;
     }
@@ -71,8 +105,6 @@ body {
   left: 0;
   z-index: 999;
   background-color: transparent;
-  // border-bottom: 1px solid #5a5a5a;
-  // border-bottom-width: 10%;
 
   .top-menu {
     display: flex;
@@ -81,7 +113,6 @@ body {
     margin: 0;
     height: 100%;
     padding: 0px 20px;
-    // width: 100%;
 
     li {
       list-style: none;
@@ -152,7 +183,6 @@ body {
   .logo-container {
     display: flex;
     align-items: center;
-    // background-color: $base-color-blue;
 
     .navi-logo {
       height: $navigation-logo-height;
@@ -166,11 +196,9 @@ body {
   height: 100dvh;
   padding-top: $navigation-menu-size;
   background-color: $main-section-bgc-color;
-  //   background-color: #fff;
   position: relative;
-  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)),
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9)),
     url("../images/bg_hero.webp");
-  // background: url("../images/bg_hero.webp");
   background-size: contain;
   background-repeat: no-repeat;
   background-size: cover;
@@ -179,7 +207,6 @@ body {
   color: #fff;
   display: flex;
   flex-direction: column;
-  // justify-content: end;
   align-items: center;
 
   .content-title {
@@ -234,8 +261,6 @@ body {
   }
 
   a {
-    // padding-top: 60px;
-    // border: 1px solid red;
     position: absolute;
     bottom: 100px;
     color: $base-color-red;
@@ -300,82 +325,13 @@ body {
   }
 }
 
-/* Dodane style dla sekcji korzyści */
 .benefits-section {
-  min-height: 100dvh;
-  background-color: #fafafa;
-  // padding: 50px;
-  text-align: center;
-  // padding-top: $navigation-menu-size;
-  // background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
-  //   url("../images/benefits.jpeg");
-  // background-size: cover;
-  // background-repeat: no-repeat;
-  // background-size: cover;
-  // background-position: center;
-
-  hr {
-    width: 200px;
-  }
-
-  .benefits-section-header {
-    display: flex;
-    // color: #fff;
-    // margin-bottom: 50px;
-    padding: 0 5%;
-    padding-top: $navigation-menu-size;
-    padding-bottom: 50px;
-    // box-shadow: 5px 15px 15px 0 rgba(0, 0, 0, 0.2);
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
-      url("../images/benefits.jpeg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-
-    .benefits-header {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      width: 100%;
-
-      // background-color: rgba($main-section-bgc-color, $alpha: 0.5);
-      .benefits-header-title {
-        text-align: left;
-        font-size: $display-header;
-        color: #fff;
-        margin-bottom: 0;
-        text-transform: uppercase;
-      }
-
-      .benefits-header-subtitle {
-        text-align: left;
-        color: $yellow-color;
-      }
-    }
-
-    .benefits-header-description {
-      display: flex;
-      width: 100%;
-      justify-content: flex-start;
-      align-items: center;
-      // background-color: rgba($main-section-bgc-color, $alpha: 0.5);
-      padding: 0 30px;
-      line-height: 30px;
-      text-align: left;
-      color: #fff;
-    }
-  }
-
   .benefits-card-container {
-    // position: relative;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     margin: 30px;
-    // overflow: hidden;
-    // box-shadow: 10px 15px 25px 0 rgba(0, 0, 0, 0.2);
   }
 
   .benefits-card {
@@ -392,7 +348,6 @@ body {
     overflow: hidden;
     cursor: pointer;
     box-shadow: 10px 15px 25px 0 rgba(0, 0, 0, 0.2);
-    // border-radius: 17px;
     transition: background-color 0.3s ease;
     box-sizing: border-box;
 
@@ -432,15 +387,6 @@ body {
       line-height: 30px;
       box-sizing: border-box;
       background-color: rgba($base-color-blue, 0.8);
-
-      // background-image: linear-gradient(
-      //   to bottom,
-      //   #1544b9,
-      //   #0047ae,
-      //   #0049a2,
-      //   #014a95,
-      //   #144a87
-      // );
       color: #fff;
       transition: 1s;
     }
@@ -459,68 +405,7 @@ body {
   }
 }
 
-/* Dodane style dla sekcji zaufania */
 .trust-section {
-  height: 100dvh;
-  background-color: #333;
-  color: #fff;
-  padding: 50px;
-  padding-top: $navigation-menu-size;
-  text-align: center;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)),
-    url("../images/backgroundTms.webp");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-
-  .trust-section-header {
-    display: flex;
-    padding-top: $navigation-menu-size;
-    // color: #fff;
-    // margin-bottom: 50px;
-    padding: 0 5%;
-    // background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
-    //   url("../images/caseStudy.webp");
-    // background-size: cover;
-    // background-repeat: no-repeat;
-    // background-size: cover;
-    // background-position: center;
-
-    .trust-header {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      width: 100%;
-
-      // background-color: rgba($main-section-bgc-color, $alpha: 0.5);
-      .trust-header-title {
-        text-align: left;
-        font-size: $display-header;
-        color: $base-color-blue;
-        margin-bottom: 0;
-        text-transform: uppercase;
-        color: #fff;
-      }
-
-      .trust-header-subtitle {
-        text-align: left;
-        color: $yellow-color;
-      }
-    }
-
-    .trust-header-description {
-      display: flex;
-      width: 100%;
-      justify-content: flex-start;
-      align-items: center;
-      // background-color: rgba($main-section-bgc-color, $alpha: 0.5);
-      padding: 0 30px;
-      line-height: 30px;
-      text-align: left;
-    }
-  }
-
   .trust-company-container {
     display: flex;
     flex-wrap: wrap;
@@ -537,11 +422,9 @@ body {
       width: 200px;
       transition: 0.5s all;
       margin: 25px;
-      // width: 150px;
       padding: 10px;
-      // border: 1px solid #ebebeb;
-      // border-radius: 5px;
       background-color: #fff;
+      box-shadow: 10px 15px 25px 0 rgba(0, 0, 0, 0.2);
 
       .company-link {
         opacity: 0;
@@ -582,72 +465,20 @@ body {
       }
     }
   }
-
-  //end
 }
 
 .offer-section {
-  width: 100%;
-  min-height: 100dvh;
-  padding-top: $navigation-menu-size;
-  background-color: $main-section-bgc-color;
-  //   background-color: #fff;
-  position: relative;
-  color: #fff;
-
-  .offer-section-header {
-    display: flex;
-    padding-top: $navigation-menu-size;
-    // color: #fff;
-    // margin-bottom: 50px;
-    padding: 100px 20%;
-    // background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
-    //   url("../images/caseStudy.webp");
-    // background-size: cover;
-    // background-repeat: no-repeat;
-    // background-size: cover;
-    // background-position: center;
-    // margin-top: 100px;
-
-    .offer-header {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      width: 100%;
-
-      // background-color: rgba($main-section-bgc-color, $alpha: 0.5);
-      .offer-header-title {
-        text-align: left;
-        font-size: $display-header;
-        color: $base-color-blue;
-        margin-bottom: 0;
-        text-transform: uppercase;
-        color: #fff;
-      }
-
-      .offer-header-subtitle {
-        text-align: left;
-        color: $yellow-color;
-      }
-    }
-
-    .offer-header-description {
-      display: flex;
-      width: 100%;
-      justify-content: flex-start;
-      align-items: center;
-      // background-color: rgba($main-section-bgc-color, $alpha: 0.5);
-      padding: 0 30px;
-      line-height: 30px;
-      text-align: left;
-    }
-  }
-
   .offer-solution {
     height: 100%;
-    padding: 0 20%;
+    padding: 5% 20%;
+    background-color: #fff;
+    color: $main-section-bgc-color;
 
     ul {
+      h1 {
+        font-size: $display-header;
+        color: $base-color-blue;
+      }
       li {
         list-style: none;
         margin-top: 30px;
@@ -657,162 +488,39 @@ body {
 }
 
 .about-section {
-  width: 100%;
-  height: 100dvh;
-  padding-top: $navigation-menu-size;
-  background-color: $main-section-bgc-color;
-  //   background-color: #fff;
-  position: relative;
-  color: #fff;
-
-  .about-section-header {
-    display: flex;
-    // color: #fff;
-    // margin-bottom: 50px;
-    padding: 0 5%;
-    padding-top: $navigation-menu-size;
-    padding-bottom: 50px;
-    // // box-shadow: 5px 15px 15px 0 rgba(0, 0, 0, 0.2);
-    // background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
-    //   url("../images/benefits.jpeg");
-    // background-size: cover;
-    // background-repeat: no-repeat;
-    // background-size: cover;
-    // background-position: center;
-    padding: 0 20%;
-
-    .about-header {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      width: 100%;
-
-      // background-color: rgba($main-section-bgc-color, $alpha: 0.5);
-      .about-header-title {
-        text-align: left;
-        font-size: $display-header;
-        color: #fff;
-        margin-bottom: 0;
-        text-transform: uppercase;
-      }
-
-      .about-header-subtitle {
-        text-align: left;
-        color: $yellow-color;
-      }
-    }
-
-    .about-header-description {
-      display: flex;
-      width: 100%;
-      justify-content: flex-start;
-      align-items: center;
-      // background-color: rgba($main-section-bgc-color, $alpha: 0.5);
-      padding: 0 30px;
-      line-height: 30px;
-      text-align: left;
+  ul {
+    list-style: none;
+    a {
       color: #fff;
+      text-decoration: none;
 
-      ul {
-        list-style: none;
-        a {
-          color: #fff;
-          text-decoration: none;
-
-          &:hover {
-            color: $yellow-color;
-          }
-        }
+      &:hover {
+        color: $yellow-color;
       }
     }
   }
 }
 
-// .trust-section {
-//   height: 100dvh;
-//   .trust-header {
-//     font-size: $display-header;
-//     text-align: center;
-//   }
-
-//   .trust-company-container {
-//     display: flex;
-//     flex-wrap: wrap;
-//     justify-content: space-around;
-//     align-items: center;
-//     padding: 0 100px;
-//     // overflow: hidden;
-//   }
-// }
-
 .section-job {
-  min-height: 100svh;
-  background: linear-gradient(
-    rgba($main-section-bgc-color, 1),
-    rgba($main-section-bgc-color, 0.8)
-  );
-  // background-image: url(../images/bg_circle.webp);
-  // background-size: cover;
-  // background-attachment: fixed;
-
-  .job-section-header {
-    display: flex;
-    height: 350px;
-    padding-top: $navigation-menu-size;
-    color: #fff;
-    padding: 0 20%;
-
-    .job-header {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      width: 100%;
-
-      // background-color: rgba($main-section-bgc-color, $alpha: 0.5);
-      .job-header-title {
-        text-align: left;
-        font-size: $display-header;
-        color: #fff;
-        margin-bottom: 0;
-        text-transform: uppercase;
-      }
-
-      .job-header-subtitle {
-        text-align: left;
-        color: $yellow-color;
-      }
-    }
-
-    .job-header-description {
-      display: flex;
-      width: 100%;
-      justify-content: flex-start;
-      align-items: center;
-      // background-color: rgba($main-section-bgc-color, $alpha: 0.5);
-      padding: 0 30px;
-      line-height: 30px;
-    }
-  }
-
+  display: flex;
+  flex-direction: column;
   .job-offer-container {
+    height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
-    align-items: flex-start;
+    align-items: center;
 
     .card-job-container {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      // border: 1px solid #464545;
-      // border-color: 1px solid $main-section-bgc-color;
-      // background-color: $main-section-bgc-color;
-      background-color: rgba($main-section-bgc-color, 0.6);
+      background-color: rgba($base-color-blue, 0.6);
       margin: 20px 50px;
-
       transition: 1s all;
+      box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
 
       .close {
         display: none;
@@ -820,6 +528,7 @@ body {
 
       &:hover {
         cursor: pointer;
+        background-color: rgba($base-color-blue, 1);
         transform: scale(1.2);
       }
 
@@ -834,19 +543,17 @@ body {
           font-size: 14px;
           display: inline;
           position: absolute;
-          // color: $base-color-red;
           color: #fff;
           text-transform: uppercase;
           font-weight: bold;
           bottom: 10px;
           left: 50%;
           transform: translateX(-50%);
-          // background-color: rgba($main-section-bgc-color, 0.9);
-          background-color: rgba($base-color-blue, 0.9);
+          background-color: rgba($base-color-red, 0.9);
           padding: 10px 20px;
 
           &:hover {
-            color: $base-color-blue;
+            color: $base-color-red;
             background-color: #fff;
           }
         }
@@ -1120,21 +827,6 @@ body {
           flex-direction: row;
           justify-content: space-between;
 
-          // .close-btn{
-          //   background-color: rgba($main-section-bgc-color, $alpha: 0.3);
-          //   color: #fff;
-          //   border: none;
-
-          // .submit-btn{
-          //   background-color: $base-color-blue;
-          //   color: #FFF;
-
-          //   &:hover{
-          //     background-color: #fff;
-          //     color: $base-color-blue;
-          //   }
-          // }
-
           button {
             font-family: "Roboto Condensed";
             padding: 10px 20px;
@@ -1157,72 +849,9 @@ body {
 }
 
 .case-section {
-  // padding-top: $navigation-menu-size;
-  text-align: center;
-  background: linear-gradient(
-    rgba($main-section-bgc-color, 1),
-    rgba($main-section-bgc-color, 0.3)
-  );
-  // background-color: rgba($main-section-bgc-color, 1);
-  // background: linear-gradient(rgba($main-section-bgc-color, 1), rgba($main-section-bgc-color, 0.7));
-  //   url("../images/caseStudy.webp");
-  //     background-size: cover;
-  //     background-repeat: no-repeat;
-  //     background-size: cover;
-  // background-position: center;
-  // background-color: rgba($main-section-bgc-color, 0.9);
-  // padding-top: $navigation-menu-size;
-
-  .case-section-header {
-    display: flex;
-    height: 350px;
-    padding-top: $navigation-menu-size;
-    color: #fff;
-    // margin-bottom: 50px;
-    padding: 0 20%;
-    // background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
-    //   url("../images/caseStudy.webp");
-    // background-size: cover;
-    // background-repeat: no-repeat;
-    // background-size: cover;
-    // background-position: center;
-
-    .case-header {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      width: 100%;
-
-      // background-color: rgba($main-section-bgc-color, $alpha: 0.5);
-      .case-header-title {
-        text-align: left;
-        font-size: $display-header;
-        color: #fff;
-        margin-bottom: 0;
-      }
-
-      .case-header-subtitle {
-        text-align: left;
-        color: $yellow-color;
-      }
-    }
-
-    .case-header-description {
-      display: flex;
-      width: 100%;
-      text-align: left;
-      align-items: center;
-      // background-color: rgba($main-section-bgc-color, $alpha: 0.5);
-      padding: 0 30px;
-      line-height: 30px;
-    }
-  }
-
   .article-container {
     display: flex;
     flex-direction: column;
-    // justify-content: space-around;
-    // flex-wrap: wrap;
 
     .article.show {
       width: 100%;
@@ -1231,20 +860,11 @@ body {
     .article {
       display: flex;
       flex-direction: row;
-      // background-color: #fafafa;
       background-color: #fff;
       overflow: hidden;
       width: 0;
       transition: 0.5s all;
 
-      // min-width: 300px;
-      // max-width: 600px;
-      // width: 40%;
-      // margin: 20px;
-      // padding: 40px 40px;
-      // border: 1px solid #efefef;
-      // box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.25);
-      // border-radius: 5px;
       .article-description {
         display: flex;
         flex-direction: column;
@@ -1253,13 +873,9 @@ body {
         font-size: 16px;
         font-weight: normal;
         line-height: 25px;
-        // margin-top: 20px;
-        // padding: 20px 50px;
         padding-left: 8%;
         padding-right: 8%;
         text-align: justify;
-        // border-top: 1px solid #e3e3e3;
-        // border-bottom: 1px solid #e3e3e3;
         width: 50%;
         box-sizing: border-box;
 
@@ -1289,11 +905,8 @@ body {
             border: none;
             padding: 10px 20px;
             margin-bottom: 20px;
-            // font-weight: bold;
             background-color: #fff;
             color: $base-color-blue;
-            // border: 1px solid $base-color-blue;
-            // border-radius: 5px;
             cursor: pointer;
             transition: 0.3s all;
 
@@ -1312,7 +925,6 @@ body {
 
       .article-header {
         text-align: center;
-        // position: relative;
         width: 50%;
         height: 500px;
         box-sizing: border-box;
@@ -1333,7 +945,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  // background-color: #fff;
   background-color: $main-section-bgc-color;
   background-image: url("../images/bg_contact.webp");
   background-size: cover;
@@ -1351,7 +962,6 @@ body {
   .contact-container {
     display: flex;
     flex-wrap: wrap;
-    // background-color: $base-color-blue;
     color: #fff;
     align-items: center;
     position: relative;
@@ -1362,7 +972,6 @@ body {
       display: flex;
       flex-direction: column;
       justify-content: end;
-      // background-color: $base-color-blue;
       background-color: rgba($base-color-blue, $alpha: 0.9);
 
       .address-logo-container {
@@ -1374,10 +983,6 @@ body {
         justify-self: start;
 
         .address-logo {
-          // position: absolute;
-          // top: 80px;
-          // align-self: center;
-          // justify-self: start;
           height: 40px;
         }
       }
@@ -1398,14 +1003,6 @@ body {
         div {
           display: flex;
           flex-direction: column;
-
-          // h2 {
-          //   margin: 0 0 10px 0;
-          // }
-
-          // h4 {
-          //   margin: 0;
-          // }
         }
       }
 
@@ -1451,7 +1048,6 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        // height: 50%;
         margin-top: 30px;
 
         img {
@@ -1469,16 +1065,13 @@ body {
     }
 
     .form-containter {
-      // border: 1px solid #e3e3e3;
       background-color: #fff;
-      // background-color: rgba(#fff, $alpha: 0.9);
       color: $base-color-blue;
       max-width: 300px;
       display: flex;
       flex-direction: column;
       padding: 50px 50px;
       font-family: "Roboto Condensed";
-      // box-shadow: 1px 1px 3px 0px rgba(66, 68, 90, 0.5);
 
       form {
         display: flex;
@@ -1493,13 +1086,11 @@ body {
         }
 
         label {
-          // opacity: 0.3;
           position: absolute;
           bottom: 0;
           left: 5px;
           transition: 1s all;
           line-height: 40px;
-          // text-transform: uppercase;
         }
 
         textarea + label {
@@ -1541,15 +1132,11 @@ body {
         button {
           align-self: end;
           font-family: "Roboto Condensed";
-          // font-weight: bold;
           padding: 10px 20px;
           background-color: #fff;
           color: $base-color-blue;
           cursor: pointer;
           border: 1px solid $base-color-blue;
-          // border: none;
-          // box-shadow: 1px 1px 3px 0px rgba(66, 68, 90, 0.5);
-
           transition: 0.3s all;
 
           &:hover {
@@ -1563,40 +1150,23 @@ body {
 }
 
 .main-footer {
-  position: absolute;
+  position: relative;
   width: 100%;
   bottom: 0;
   display: flex;
   align-items: center;
   height: 200px;
   background-color: rgba($base-color-blue, 1);
-  // background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
-  //   url("../images/bgFooter.webp");
-  // background-repeat: no-repeat;
-  // background-size: cover;
-  // background-position: center;
-  // background: linear-gradient(
-  //   rgba($main-section-bgc-color, 0.9),
-  //   rgba($main-section-bgc-color, 1)
-  // );
-  // margin-top: 50px;
   overflow: hidden;
 
   .footer-logo-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    // background-color: rgba(#fff, 1);
-    // height: 150px;
-    // width: 230px;
-    // padding: 30px;
     box-sizing: border-box;
-    // border-radius: 50%;
-    // border-top: 1px solid rgba($base-color-blue, 0.9);
-    // box-shadow: 3px 3px 15px 0 rgba(0, 0, 0, 0.5);
     margin-left: 30px;
+
     .footer-logo {
-      // height: 50px;
       height: 100%;
       width: 100%;
     }
@@ -1690,4 +1260,353 @@ body {
       }
     }
   }
+}
+
+@media only screen and (max-width: 850px) {
+  body {
+    width: 100vw;
+    overflow-x: hidden;
+    .top-menu-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      margin: 0;
+      background-color: $main-section-bgc-color;
+      height: 50px;
+      .logo-container {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        img {
+          height: 30px;
+        }
+      }
+      .menuBtn {
+        height: 30px;
+        width: 30px;
+
+        position: absolute;
+        right: 20px;
+        top: 10px;
+        z-index: 101;
+        > span {
+          background-color: #fff;
+          border-radius: 1px;
+          height: 2px;
+          width: 100%;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          margin: -1px 0 0 -15px;
+          transition: height 100ms;
+          &:after,
+          &:before {
+            content: "";
+            background-color: #fff;
+            border-radius: 1px;
+            height: 2px;
+            width: 100%;
+            position: absolute;
+            left: 50%;
+            margin-left: -15px;
+            transition: all 200ms;
+          }
+          &:after {
+            top: -7px;
+          }
+          &:before {
+            bottom: -7px;
+          }
+        }
+        &.act {
+          > span {
+            height: 0;
+            &:after,
+            &:before {
+              background-color: $base-color-red;
+              top: 1px;
+            }
+            &:after {
+              transform: rotate(45deg);
+            }
+            &:before {
+              transform: rotate(-45deg);
+            }
+          }
+        }
+      }
+      .top-menu {
+        background-color: $main-section-bgc-color;
+        position: absolute;
+        left: 0;
+        top: 50px;
+        z-index: 100;
+        height: 100%;
+        width: 100%;
+        display: table;
+        text-align: center;
+        opacity: 1;
+        transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        transform: scale(0);
+        display: table-cell;
+        vertical-align: middle;
+        margin: 0;
+        padding: 0;
+
+        li {
+          padding: 20px;
+          transition: all 400ms 510ms;
+          opacity: 0;
+          background-color: $main-section-bgc-color;
+          &:nth-child(odd) {
+            transform: translateX(30%);
+          }
+          &:nth-child(even) {
+            transform: translateX(-30%);
+          }
+          &:last-child {
+            transform: none;
+          }
+        }
+
+        &.act {
+          opacity: 1;
+          transform: scale(1);
+          margin: 0;
+
+          li {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+      }
+
+      .language-container {
+        display: none;
+      }
+    }
+    .top-menu-container.top-menu-active {
+      height: 50px;
+      background-color: $main-section-bgc-color;
+
+      .top-menu {
+        position: absolute;
+        background-color: $main-section-bgc-color;
+
+        li {
+          background-color: $main-section-bgc-color;
+        }
+      }
+
+      .logo-container {
+        .navi-logo {
+          height: 36px;
+        }
+      }
+    }
+
+    .content-section {
+      .content-title {
+        font-size: 30px;
+        left: auto;
+        text-align: center;
+      }
+
+      .content-subtitle {
+        font-size: 24px;
+        left: auto;
+        bottom: 350px;
+      }
+      .content-paragraph {
+        width: 100%;
+        padding: 0 20px;
+        box-sizing: border-box;
+      }
+    }
+    .section {
+      .section-header {
+        display: flex;
+        flex-direction: column;
+        padding: 50px 20px;
+        .header {
+          .header-title {
+            text-align: center;
+            font-size: 24px;
+          }
+          .header-subtitle {
+            text-align: center;
+            font-size: 18px;
+          }
+        }
+        .header-description {
+          margin-top: 20px;
+          text-align: justify;
+          padding: 0;
+          box-sizing: border-box;
+          padding: 15px;
+        }
+      }
+    }
+
+    .trust-section.section {
+      .trust-company-container {
+        padding-bottom: 20px;
+        height: 100%;
+        .trust-company {
+          height: 50px;
+          width: 100px;
+          margin: 0;
+          img {
+            height: 30px;
+            max-width: 95px;
+          }
+        }
+      }
+    }
+    .offer-section {
+      .offer-solution {
+        padding: 5% 20px;
+        ul {
+          padding: 0;
+        }
+      }
+    }
+    .main-footer {
+      display: flex;
+      height: auto;
+      padding-top: 20px;
+      // flex-direction: column;
+      .footer-logo-container {
+        position: absolute;
+        top: 15px;
+        left: 10px;
+        margin-left: 0;
+        .footer-logo {
+          height: 60px;
+        }
+      }
+      .footer-data {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .footer-address {
+          width: 100%;
+          text-align: center;
+          margin: 0;
+          margin-bottom: 30px;
+          padding-bottom: 20px;
+          border-bottom: 1px solid rgba(#fafafa, 0.3);
+        }
+        .footer-web {
+          display: flex;
+          justify-content: center;
+          align-items: end;
+          padding: 0;
+          padding-bottom: 50px;
+          margin: 0;
+          margin-bottom: 20px;
+          border-bottom: 1px solid rgba(#fafafa, 0.3);
+          width: 100%;
+
+          ul {
+            margin: 0;
+            padding: 0;
+            .footer-web-header {
+              font-size: 24px;
+            }
+            li {
+              a {
+                line-height: 30px;
+                font-size: 18px;
+              }
+            }
+          }
+        }
+
+        .policy {
+          display: flex;
+          justify-content: center;
+          margin: 0;
+          margin-bottom: 40px;
+          border-bottom: 1px solid rgba(#fafafa, 0.3);
+          width: 100%;
+          padding-bottom: 50px;
+
+          ul {
+            padding: 0;
+            .policy-header {
+              font-size: 24px;
+            }
+            li {
+              a {
+                line-height: 30px;
+                font-size: 18px;
+              }
+            }
+          }
+        }
+
+        .social-container {
+          display: flex;
+          justify-content: center;
+          width: 100%;
+          margin-bottom: 20px;
+        }
+      }
+    }
+
+    .contact-section {
+      .contact-container {
+        .address-container {
+          position: relative;
+          padding-top: 0;
+          .address-logo-container {
+            display: block;
+            position: absolute;
+            top: 200px;
+            .address-logo {
+              height: 70px;
+            }
+          }
+          .address {
+            margin: 0;
+          }
+        }
+      }
+    }
+
+    .case-section {
+      .article-container {
+        .article {
+          background-color: $main-section-bgc-color;
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          height: 100%;
+
+          .article-description {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            color: #fff;
+            z-index: 3;
+
+            .article-title {
+              color: $yellow-color;
+            }
+          }
+
+          .article-header {
+            width: 100%;
+            z-index: 1;
+            opacity: 0.4;
+          }
+        }
+      }
+    }
+  } //body
 }

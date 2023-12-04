@@ -122,3 +122,19 @@ document.addEventListener("DOMContentLoaded", function () {
   subtitle.style.animation = "fadeIn 1s 2s forwards";
   paragraph.style.animation = "fadeIn 1s 3s forwards";
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  // menu click event
+  var menuBtn = document.querySelector(".menuBtn");
+  var mainMenu = document.querySelector(".top-menu");
+
+  menuBtn.addEventListener("click", function () {
+    menuBtn.classList.toggle("act");
+
+    if (menuBtn.classList.contains("act")) {
+      mainMenu.classList.add("act");
+    } else {
+      mainMenu.classList.remove("act");
+    }
+  });
+});
