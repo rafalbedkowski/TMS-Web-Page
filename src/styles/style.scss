@@ -461,7 +461,6 @@ body {
 
       .trust-company-img {
         height: 50px;
-        max-width: 180px;
       }
     }
   }
@@ -1226,10 +1225,11 @@ body {
       color: #fff;
       margin: 0 30px;
 
+      .policy-header {
+        color: $yellow-color;
+      }
+
       ul {
-        .policy-header {
-          color: $yellow-color;
-        }
         li {
           list-style: none;
           a {
@@ -1452,20 +1452,16 @@ body {
       min-height: 100%;
     }
 
-    .section-job {
-      min-height: 100dvh;
-    }
-
     .trust-section.section {
       .trust-company-container {
         padding-bottom: 20px;
         height: 100%;
         .trust-company {
-          height: 50px;
+          height: 100px;
           width: 100px;
           margin: 0;
-          img {
-            height: 30px;
+          .trust-company-img {
+            height: auto;
             max-width: 95px;
           }
         }
@@ -1506,6 +1502,7 @@ body {
           padding-bottom: 20px;
           border-bottom: 1px solid rgba(#fafafa, 0.3);
         }
+
         .footer-web {
           display: flex;
           justify-content: center;
@@ -1517,12 +1514,14 @@ body {
           border-bottom: 1px solid rgba(#fafafa, 0.3);
           width: 100%;
 
+          .footer-web-header {
+            font-size: 24px;
+          }
+
           ul {
             margin: 0;
             padding: 0;
-            .footer-web-header {
-              font-size: 24px;
-            }
+
             li {
               a {
                 line-height: 30px;
