@@ -108,41 +108,33 @@ window.onload = function () {
     }
   };
 
-  //Trust company animation
-
-  const companies = document.querySelectorAll(".trust-company");
-  let startPosition = 50;
-  let lastPosition = 0;
-
-  if (companies.length > 0) {
-    companies.forEach((company) => {
-      company.style.left = startPosition + "px";
-      startPosition += company.clientWidth + 50;
-      if (lastPosition < startPosition) {
-        lastPosition = startPosition - (company.clientWidth + 50);
-      }
-    });
-
-    setInterval(() => {
-      companies.forEach((company) => {
-        const companyPosition = parseInt(
-          company.style.left.replace("px", ""),
-          10
-        );
-        company.style.left = companyPosition - 10 + "px";
-
-        companyPosition < screen.width && companyPosition > 0
-          ? (company.style.visibility = "visible")
-          : (company.style.visibility = "hidden");
-
-        if (companyPosition + company.clientWidth <= 0) {
-          company.style.left = lastPosition + "px";
-        }
-      });
-    }, 100);
-  }
-
   window.addEventListener("scroll", function () {
     animateScroll();
   });
 };
+
+document.addEventListener("DOMContentLoaded", function () {
+  const title = document.querySelector(".content-title");
+  const subtitle = document.querySelector(".content-subtitle");
+  const paragraph = document.querySelector(".content-paragraph");
+
+  title.style.animation = "fadeInLeft 3s forwards";
+  subtitle.style.animation = "fadeIn 1s 2s forwards";
+  paragraph.style.animation = "fadeIn 1s 3s forwards";
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  // menu click event
+  var menuBtn = document.querySelector(".menuBtn");
+  var mainMenu = document.querySelector(".top-menu");
+
+  menuBtn.addEventListener("click", function () {
+    menuBtn.classList.toggle("act");
+
+    if (menuBtn.classList.contains("act")) {
+      mainMenu.classList.add("act");
+    } else {
+      mainMenu.classList.remove("act");
+    }
+  });
+});
