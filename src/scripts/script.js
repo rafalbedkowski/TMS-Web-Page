@@ -117,8 +117,8 @@ window.onload = function () {
   const content = document.querySelector(".content-section")
 
   function getRandomPosition(element) {
-    const x = content.offsetHeight - element.clientHeight;
-    const y = content.offsetWidth - element.clientWidth;
+    const x = content.offsetWidth - element.clientWidth;
+    const y = content.offsetHeight - element.clientHeight;
     const randomX = Math.floor(Math.random() * x);
     const randomY = Math.floor(Math.random() * y);
     return [randomX, randomY];
@@ -133,14 +133,12 @@ window.onload = function () {
     textElement.style.top = x + 'px';
     container.appendChild(textElement);
   
-    // Usuń element po zakończeniu animacji
     textElement.addEventListener('animationend', () => {
       textElement.remove();
     });
   }
   
-  // Uruchom funkcję co 2 sekundy
-  setInterval(createText, 5000);
+  setInterval(createText, 1500);
 };
 
 document.addEventListener("DOMContentLoaded", function () {
