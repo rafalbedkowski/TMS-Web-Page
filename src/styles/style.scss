@@ -199,7 +199,7 @@ body {
   padding-top: $navigation-menu-size;
   background-color: $main-section-bgc-color;
   position: relative;
-  background: linear-gradient(rgba(0, 0, 50, 0.5), rgba(0, 0, 0, 0.8)),
+  background: linear-gradient(rgba(0, 0, 80, 0.4), rgba(0, 0, 0, 0.7)),
     url("../images/backgroundHeroTMS.webp");
   background-size: contain;
   background-repeat: no-repeat;
@@ -214,7 +214,7 @@ body {
 
   .content-title {
     // font-family: "Montserrat";
-    font-size: 80px;
+    font-size: 50px;
     font-weight: 900;
     text-transform: uppercase;
     transform: translateX(-1000px);
@@ -222,7 +222,7 @@ body {
     // top: 150px;
     // margin-top: 150px;
     margin-top: 100px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     // color: $yellow-color;
     // left: 150px;
   }
@@ -246,11 +246,12 @@ body {
 
   .content-paragraph {
     text-align: center;
-    font-size: 24px;
+    font-size: 20px;
     width: 40%;
     // position: absolute;
     line-height: 30px;
     top: 350px;
+    margin-top: 0;
   }
 
   .content-title,
@@ -274,7 +275,7 @@ body {
   }
 
   .call-to-action {
-    margin-top: 100px;
+    margin-top: 200px;
     font-size: 18px;
     height: 70px;
     width: 270px;
@@ -357,7 +358,7 @@ body {
 
 .benefits-section {
   min-height: 100vh;
-  background: linear-gradient(rgba(0, 0, 30, 0.1), rgba(0, 0, 50, 0.6)),
+  background: linear-gradient(rgba(0, 0, 30, 0.2), rgba(0, 0, 50, 0.4)),
     url("../images/backgroundBenefits.png");
   background-size: contain;
   background-repeat: no-repeat;
