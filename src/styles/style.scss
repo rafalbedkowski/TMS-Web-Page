@@ -197,7 +197,7 @@ body {
   padding-top: $navigation-menu-size;
   background-color: $main-section-bgc-color;
   position: relative;
-  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9)),
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)),
     url("../images/bg_hero.webp");
   background-size: contain;
   background-repeat: no-repeat;
@@ -219,6 +219,13 @@ body {
     position: absolute;
     top: 150px;
     left: 100px;
+  }
+
+  .subheader{
+    position: absolute;
+    top: 280px;
+    font-weight: 300;
+    font-size: 36px;
   }
 
   .content-subtitle {
