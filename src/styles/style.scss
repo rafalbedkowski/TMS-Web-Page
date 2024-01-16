@@ -197,6 +197,7 @@ body {
   width: 100%;
   height: 100dvh;
   overflow-x: hidden;
+  overflow-y: hidden;
   padding-top: $navigation-menu-size;
   background-color: $main-section-bgc-color;
   position: relative;
@@ -481,13 +482,15 @@ body {
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 80px;
-      width: 150px;
+      // height: 80px;
+      // width: 150px;
       transition: 0.5s all;
       margin: 25px;
-      padding: 10px;
-      background-color: #fff;
+      padding: 30px;
+      background-color: rgba(#FFF, $alpha: 0.5);
+
       box-shadow: 10px 15px 25px 0 rgba(0, 0, 0, 0.2);
+      // filter: grayscale(1);
 
       .company-link {
         opacity: 0;
@@ -513,17 +516,22 @@ body {
 
       &:hover {
         transform: scale(1.2);
+        background-color: #fff;
         box-shadow: 10px 15px 25px 0 rgba(0, 0, 0, 0.2);
         cursor: pointer;
+        filter: grayscale(0);
       }
 
-      &:hover .company-link {
+      &:hover .trust-company-img {
         opacity: 1;
         transition: 2s all;
+        filter: grayscale(0);
+
       }
 
       .trust-company-img {
         height: 40px;
+        filter: grayscale(1);
       }
     }
   }

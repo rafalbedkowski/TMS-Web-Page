@@ -118,7 +118,7 @@ window.onload = function () {
 
   function getRandomPosition(element) {
     const x = content.offsetWidth - element.clientWidth;
-    const y = content.offsetHeight - element.clientHeight;
+    const y = content.offsetHeight - element.clientHeight - 70;
     const randomX = Math.floor(Math.random() * x);
     const randomY = Math.floor(Math.random() * y);
     return [randomX, randomY];
