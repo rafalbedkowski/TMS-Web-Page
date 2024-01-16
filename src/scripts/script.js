@@ -118,9 +118,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const subtitle = document.querySelector(".content-subtitle");
   const paragraph = document.querySelector(".content-paragraph");
 
-  title.style.animation = "fadeInLeft 3s forwards";
-  subtitle.style.animation = "fadeIn 1s 2s forwards";
-  paragraph.style.animation = "fadeIn 1s 3s forwards";
+  if (title != null && subtitle != null && paragraph != null) {
+    title.style.animation = "fadeInLeft 3s forwards";
+    subtitle.style.animation = "fadeIn 1s 2s forwards";
+    paragraph.style.animation = "fadeIn 1s 3s forwards";
+  }
 });
 
 document.addEventListener("DOMContentLoaded", function () {
