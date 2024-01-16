@@ -111,6 +111,36 @@ window.onload = function () {
   window.addEventListener("scroll", function () {
     animateScroll();
   });
+
+  const texts = ['Wydobycie i produkcja kruszyw', 'Produkcja wapna', 'Recykling','Produkcja betonu']; // Dodaj więcej tekstów według potrzeb
+  const container = document.getElementById('random-text-container');
+  const content = document.querySelector(".content-section")
+
+  function getRandomPosition(element) {
+    const x = content.offsetHeight - element.clientHeight;
+    const y = content.offsetWidth - element.clientWidth;
+    const randomX = Math.floor(Math.random() * x);
+    const randomY = Math.floor(Math.random() * y);
+    return [randomX, randomY];
+  }
+  
+  function createText() {
+    const textElement = document.createElement('div');
+    textElement.classList.add('animated-text');
+    textElement.textContent = texts[Math.floor(Math.random() * texts.length)];
+    const [x, y] = getRandomPosition(textElement);
+    textElement.style.left = y + 'px';
+    textElement.style.top = x + 'px';
+    container.appendChild(textElement);
+  
+    // Usuń element po zakończeniu animacji
+    textElement.addEventListener('animationend', () => {
+      textElement.remove();
+    });
+  }
+  
+  // Uruchom funkcję co 2 sekundy
+  setInterval(createText, 5000);
 };
 
 document.addEventListener("DOMContentLoaded", function () {

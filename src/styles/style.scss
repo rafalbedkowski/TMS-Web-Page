@@ -196,6 +196,7 @@ body {
 .content-section {
   width: 100%;
   height: 100dvh;
+  overflow-x: hidden;
   padding-top: $navigation-menu-size;
   background-color: $main-section-bgc-color;
   position: relative;
@@ -289,9 +290,8 @@ body {
     transition: all 0.3s;
 
     &:hover {
-      background-color: rgba($base-color-blue, 1);
-      border: none;
-      color: #fff;
+     border: 2px solid $yellow-color;
+     color: #fff;
     }
   }
 
@@ -1681,4 +1681,32 @@ body {
       }
     }
   } //body
+}
+
+#random-text-container .animated-text {
+  position: absolute;
+  font-size: 50px;
+  font-family: "Montserrat";
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  animation: scaleUp 5s ease-in-out forwards;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
 }
