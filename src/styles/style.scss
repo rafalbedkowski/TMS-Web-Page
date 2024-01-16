@@ -279,15 +279,19 @@ body {
     font-size: 18px;
     height: 70px;
     width: 270px;
-    background-color: rgba($base-color-blue, 1);
-    color: $white-color;
+    // background-color: rgba($base-color-blue, 1);
+    background-color: rgba(0,0,0, 0.5);
+    color: $yellow-color;
+    // border: 2px solid $yellow-color;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
     transition: all 0.3s;
 
     &:hover {
-      background-color: rgba($base-color-red, 1);
+      background-color: rgba($base-color-blue, 1);
+      border: none;
+      color: #fff;
     }
   }
 
