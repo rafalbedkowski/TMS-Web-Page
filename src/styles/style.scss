@@ -486,7 +486,7 @@ body {
       margin: 25px;
       padding: 30px;
       background-color: rgba(0,0,0, $alpha: 0.5);
-      box-shadow: 10px 15px 25px 0 rgba(0, 0, 0, 0.2);
+      // box-shadow: 10px 15px 25px 0 rgba(0, 0, 10, 0.1);
 
       .company-link {
         opacity: 0;
@@ -516,7 +516,7 @@ body {
         box-shadow: 10px 15px 25px 0 rgba(0, 0, 0, 0.2);
         cursor: pointer;
         filter: grayscale(0);
-        filter: blur(0);
+        // filter: blur(0);
       }
 
       &:hover .trust-company-img {
@@ -528,7 +528,7 @@ body {
 
       .trust-company-img {
         height: 40px;
-        filter: grayscale(1) blur(1px);
+        filter: grayscale(1);
       }
     }
   }
@@ -1118,7 +1118,8 @@ body {
         margin-top: 30px;
 
         img {
-          filter: grayscale(1);
+          // filter: grayscale(1);
+          filter: grayscale(1) invert(1) brightness(2) contrast(2);
           opacity: 0.7;
           height: 25px;
           margin: 0 5px;

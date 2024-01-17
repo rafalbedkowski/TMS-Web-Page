@@ -139,6 +139,41 @@ window.onload = function () {
   }
   
   setInterval(createText, 1500);
+
+
+ // Pobranie wszystkich elementów z klasą .trust-company
+const elements = document.querySelectorAll('.trust-company');
+
+// Funkcja do losowego wyboru elementu z tablicy
+function getRandomElement(arr) {
+    return arr[Math.floor(Math.random() * arr.length)];
+}
+
+// Funkcja do zmiany skali i stylów wybranego elementu
+function changeScale() {
+    // Resetowanie skali i stylów wszystkich elementów
+    elements.forEach(el => {
+        el.style.transform = '';
+        el.style.backgroundColor = '';
+        el.style.filter = '';
+    });
+
+    // Losowy wybór elementu i zmiana jego skali oraz stylów
+    const randomElement = getRandomElement(elements);
+    randomElement.style.transform = 'scale(1.2)';
+    randomElement.style.backgroundColor = 'white';
+    randomElement.style.filter = 'grayscale(0)';
+
+    // Przywrócenie pierwotnej skali i stylów po 1 sekundzie
+    setTimeout(() => {
+        randomElement.style.transform = '';
+        randomElement.style.backgroundColor = '';
+        randomElement.style.filter = '';
+    }, 1000);
+}
+
+// Ustawienie interwału, aby funkcja była wywoływana co sekundę
+setInterval(changeScale, 2000);
 };
 
 document.addEventListener("DOMContentLoaded", function () {
