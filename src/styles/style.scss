@@ -201,7 +201,7 @@ body {
   padding-top: $navigation-menu-size;
   background-color: $main-section-bgc-color;
   position: relative;
-  background: linear-gradient(rgba(0, 0, 50, 0.5), rgba(0, 0, 0, 0.6)),
+  background: linear-gradient(rgba(0, 0, 50, 0.5), rgba(0, 50, 0, 0.6)),
     url("../images/backgroundHeroTMS.webp");
   background-size: contain;
   background-repeat: no-repeat;
@@ -554,6 +554,28 @@ body {
       li {
         list-style: none;
         margin-top: 30px;
+
+        .offer-summary{
+          padding: 30px 0;;
+          font-size: 20px;
+          text-justify: justify;
+          color: $base-color-blue;
+        }
+
+        .contact-href{
+          background-color:transparent;
+          color: $base-color-blue;
+          padding: 15px 25px;
+          border: 1px solid $base-color-blue;
+          border-radius: 5px;
+          text-align: center;
+          cursor: pointer;
+
+          &:hover{
+            background-color:$base-color-blue;
+            color: #FFF;
+          }
+        }
       }
     }
   }
