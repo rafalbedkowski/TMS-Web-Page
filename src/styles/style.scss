@@ -483,8 +483,10 @@ body {
       justify-content: center;
       align-items: center;
       transition: 1s all;
+      height: 50px;
+      width: 100px;
       margin: 25px;
-      padding: 30px;
+      padding: 20px;
       background-color: rgba(0,0,0, $alpha: 0.5);
       // box-shadow: 10px 15px 25px 0 rgba(0, 0, 10, 0.1);
 
@@ -527,7 +529,8 @@ body {
       }
 
       .trust-company-img {
-        height: 40px;
+        // height: 40px;
+        max-width: 80px;
         filter: grayscale(1);
       }
     }
