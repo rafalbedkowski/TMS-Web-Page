@@ -201,7 +201,7 @@ body {
   padding-top: $navigation-menu-size;
   background-color: $main-section-bgc-color;
   position: relative;
-  background: linear-gradient(rgba(0, 0, 80, 0.4), rgba(0, 0, 0, 0.7)),
+  background: linear-gradient(rgba(0, 0, 50, 0.5), rgba(0, 0, 0, 0.6)),
     url("../images/backgroundHeroTMS.webp");
   background-size: contain;
   background-repeat: no-repeat;
@@ -476,6 +476,8 @@ body {
     gap: 20px;
     margin-top: 20px;
     padding: 100px 0;
+    // min-height: 50vh;
+
 
     .trust-company {
       position: relative;
