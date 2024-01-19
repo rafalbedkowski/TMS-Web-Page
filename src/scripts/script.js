@@ -1,4 +1,5 @@
 window.onload = function () {
+
   const jobCards = document.querySelectorAll(".card-job-container");
   const closeButtons = document.querySelectorAll(".close");
 

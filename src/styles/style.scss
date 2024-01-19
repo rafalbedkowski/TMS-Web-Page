@@ -201,7 +201,7 @@ body {
   padding-top: $navigation-menu-size;
   background-color: $main-section-bgc-color;
   position: relative;
-  background: linear-gradient(rgba(0, 0, 50, 0.5), rgba(0, 0, 50, 0.6)),
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("../images/backgroundHeroTMS.webp");
   background-size: contain;
   background-repeat: no-repeat;
@@ -235,7 +235,9 @@ body {
     font-weight: 300;
     font-size: 36px;
   }
-
+.container-content-title{
+  // background-color: rgba(0,0,0container-content-title,.6);
+  // padding: 0 70px 70px 70px;
   .content-subtitle {
     display: none;
     font-size: 40px;
@@ -249,12 +251,13 @@ body {
   .content-paragraph {
     text-align: center;
     font-size: 20px;
-    width: 40%;
+    width: 100%;
     // position: absolute;
     line-height: 30px;
     top: 350px;
     margin-top: 0;
   }
+}
 
   .content-title,
   .content-subtitle,
@@ -280,19 +283,20 @@ body {
     margin-top: 200px;
     font-size: 18px;
     height: 70px;
-    width: 270px;
+    width: 300px;
     // background-color: rgba($base-color-blue, 1);
-    background-color: rgba(0,0,0, 0.5);
-    color: $yellow-color;
+    // background-color: rgba(0,0,0, 0.5);
+    background-color: rgba($base-color-red, 0.5);
+    // color: $yellow-color;
+    color: #FFF;
     // border: 2px solid $yellow-color;
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    transition: all 0.3s;
+    transition: all 0.5s;
 
     &:hover {
-     border: 2px solid $yellow-color;
-     color: #fff;
+      background-color:$base-color-red;
     }
   }
 
@@ -457,6 +461,36 @@ body {
   .benefits-card:hover {
     background-color: rgba($base-color-blue, 0.6);
   }
+
+  .container-call-to-action{
+    display: block;
+    width:100%;
+    text-align: center;
+    text-decoration: none;
+
+  .call-to-action {
+    // margin-top: 200px;
+    margin-bottom: 50px;
+    font-size: 18px;
+    height: 70px;
+    width: 300px;
+    // background-color: rgba($base-color-blue, 1);
+    // background-color: rgba(0,0,0, 0.5);
+    background-color: rgba($base-color-red, 0.5);
+    // color: $yellow-color;
+    color: #FFF;
+    // border: 2px solid $yellow-color;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.5s;
+
+    &:hover {
+     background-color:$base-color-red;
+    //  color: $yellow-color;
+    }
+  }
+}
 }
 
 .trust-section {
@@ -542,11 +576,75 @@ body {
 .offer-section {
   .offer-solution {
     height: 100%;
-    padding: 5% 20%;
+    // padding: 5% 20%;
     background-color: #fff;
     color: $main-section-bgc-color;
 
+    .offer-action{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 50px 5%;
+
+      .offer-summary{
+        // padding: 30px 0;;
+        font-size: 20px;
+        text-justify: justify;
+        color: $base-color-blue;
+      }
+  
+      .contact-href{
+        background-color:transparent;
+        color: $base-color-blue;
+        padding: 15px 25px;
+        border: 1px solid $base-color-blue;
+        border-radius: 5px;
+        text-align: center;
+        cursor: pointer;
+  
+        &:hover{
+          background-color:$base-color-blue;
+          color: #FFF;
+        }
+      }
+    }
+
+    .container-offer-header{
+      display: flex;
+      .container-offer-photo{
+        width: 50%;
+
+        img{
+          width: 50vw;
+          // height: 100%;
+        }
+      }
+
+      .container-offer-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 5%;
+        color: $base-color-blue;
+
+        h3{
+          color: #303030;
+          font-weight: 400;
+        }
+
+        span{
+          color:#929292;
+        }
+      }
+    }
+
     ul {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      background-color: #fafafa;
+      margin-top: 0;
       h1 {
         font-size: $display-header;
         color: $base-color-blue;
@@ -554,27 +652,23 @@ body {
       li {
         list-style: none;
         margin-top: 30px;
+        height: 300px;
+        width: 300px;
+        padding: 50px;
+        // border: 2px solid rgba($base-color-blue, 1);
+        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
 
-        .offer-summary{
-          padding: 30px 0;;
-          font-size: 20px;
-          text-justify: justify;
+        // border-radius: 17px;
+        background-color: #fff;
+
+        h3{
           color: $base-color-blue;
+          text-align: center;
         }
 
-        .contact-href{
-          background-color:transparent;
-          color: $base-color-blue;
-          padding: 15px 25px;
-          border: 1px solid $base-color-blue;
-          border-radius: 5px;
-          text-align: center;
-          cursor: pointer;
-
-          &:hover{
-            background-color:$base-color-blue;
-            color: #FFF;
-          }
+        p{
+          text-align: justify;
+          line-height: 30px;
         }
       }
     }
@@ -1147,8 +1241,8 @@ body {
         img {
           // filter: grayscale(1);
           filter: grayscale(1) invert(1) brightness(2) contrast(2);
-          opacity: 0.7;
-          height: 25px;
+          // opacity: 0.7;
+          height: 30px;
           margin: 0 5px;
 
           &:hover {
@@ -1262,8 +1356,8 @@ body {
     margin-left: 30px;
 
     .footer-logo {
-      height: 100%;
-      width: 100%;
+      height: 30px;
+      // width: 100%;
     }
   }
   .footer-data {
@@ -1271,10 +1365,13 @@ body {
     justify-content: space-around;
     align-items: center;
     width: 100%;
+    // margin-bottom: 10px;
 
     .footer-address {
       color: white;
-      margin: 0 30px;
+      padding: 0 20px;
+      margin-left: 20px;
+      border-left: 1px solid #fff;
 
       h1 {
         font-size: 18px;
@@ -1347,7 +1444,7 @@ body {
         img {
           height: 30px;
           margin: 0 5px;
-          filter: grayscale(1);
+          filter: grayscale(1) invert(1) brightness(2) contrast(2);
 
           &:hover {
             filter: grayscale(0);
